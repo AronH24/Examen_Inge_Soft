@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <VendingMachine />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VendingMachine from './components/VendingMachine.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VendingMachine
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Garamond, Helvetica, Arial;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 </style>
