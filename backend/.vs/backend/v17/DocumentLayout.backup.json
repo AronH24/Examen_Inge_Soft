@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\models\\purchaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\models\\purchaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\models\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\models\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\models\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\models\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\models\\changeresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\models\\changeresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PurchaseRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\PurchaseRequest.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\PurchaseRequest.cs",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\PurchaseRequest.cs",
+              "RelativeToolTip": "backend\\Models\\PurchaseRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T00:49:41.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Money.cs",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Money.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\Money.cs",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Money.cs",
+              "RelativeToolTip": "backend\\Models\\Money.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T00:49:39.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Drink.cs",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Drink.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\Drink.cs",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Drink.cs",
+              "RelativeToolTip": "backend\\Models\\Drink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T00:49:37.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangeResult.cs",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\ChangeResult.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\ChangeResult.cs",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\ChangeResult.cs",
+              "RelativeToolTip": "backend\\Models\\ChangeResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T00:49:34.317Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
