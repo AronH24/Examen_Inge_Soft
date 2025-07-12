@@ -39,7 +39,7 @@
     </div>
 
     <div class="mb-3">
-      <h5>Total = {{ total }} colones</h5>
+      <h5>Total a pagar = {{ total }} colones</h5>
     </div>
 
     <div class="row align-items-end mb-3">
@@ -57,6 +57,10 @@
       <div class="col-md-3">
         <button class="btn btn-primary w-100" @click="addMoney">Agregar</button>
       </div>
+    </div>
+
+    <div class="mb-3">
+      <h5>Total insertado en la máquina = {{ totalInserted }} colones</h5>
     </div>
 
     <div class="d-grid">
@@ -80,6 +84,7 @@ export default {
       selectedMoney: '',
       moneyQuantity: 1,
       moneyInserted: [],
+      totalInserted: 0
     };
   },
   mounted() {
@@ -123,6 +128,7 @@ export default {
       } else {
         this.moneyInserted.push({MoneyType: this.selectedMoney,Quantity: this.moneyQuantity});
       }
+      this.totalInserted += this.selectedMoney * this.moneyQuantity;
       this.selectedMoney = '';
       this.moneyQuantity = 1;
     },
@@ -136,7 +142,8 @@ export default {
         this.cart = [];
         this.moneyInserted = [];
         this.total = 0;
-        this.fetchDrinks();
+        this.totalInserted = 0;
+        this.getDrinks();
       } catch (e) {
         alert(e.response?.data?.message || 'Error en la compra!!');
       }
