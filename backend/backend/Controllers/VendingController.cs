@@ -4,10 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 [Route("api/[controller]")]
 public class VendingController : ControllerBase
 {
-    private readonly VendingService _service;
+    private readonly VendingRepository _vendingRepository;
 
-    public VendingController(VendingService service)
+    public VendingController(VendingRepository vendingRepository)
     {
-        _service = service;
+        _vendingRepository = vendingRepository;
+    }
+
+    [HttpGet("")]
+    public IActionResult GetDrinks() => Ok(_vendingRepository.Drinks);
+
+    [HttpPost("")]
+    public IActionResult Purchase([FromBody] PurchaseRequest request)
+    {
+        var result = _vendingRepository.Purchase(request);
+        return result.Success ? Ok(result) : BadRequest(result);
     }
 }
