@@ -23,16 +23,55 @@ public class VendingRepository
 
         public ChangeResult Purchase(PurchaseRequest request)
         {
-            ChangeResult changeResult = new();
+            int totalCost = 0;
+            var drinkUpdates = new List<(Drink drink, int quantity)>();
+             
+            foreach (var item in request.Drinks)
+            {
+                var drink = Drinks.FirstOrDefault(drink => drink.Name == item.DrinkName);
+                if (drink == null)
+                    return new() { Success = false, Message = $"El refresco '{item.DrinkName}' no pudo ser encontrado" };
 
+                if (item.Quantity > drink.Quantity)
+                    return new() { Success = false, Message = $"No hay suficientes latas de '{item.DrinkName}'" };
+
+                totalCost += drink.Price * item.Quantity;
+                drinkUpdates.Add((drink, item.Quantity));
+            }
+
+            int totalInserted = request.MoneyInserted.Sum(money => money.MoneyType * money.Quantity);
+
+            if (totalInserted < totalCost)
+                return new()
+                {
+                    Success = false,
+                    Message = "El dinero insertado es insuficiente para realizar la compra"
+                };
+         
+            foreach (var money in request.MoneyInserted)
+            {
+              // Las monedas que ingresa la persona se suman al inventario 
+              CoinStock[money.MoneyType] += money.Quantity;
+            }
+
+        
+            int changeToReturn = totalInserted - totalCost;
+            
+            // TODO: Agregar luego la lógica para dar el vuelto
+
+            // Aquí se disminuye el inventario si todo sale bien
+            foreach (var (drink, quantity) in drinkUpdates)
+                drink.Quantity -= quantity;
+   
+            var changeResult = new ChangeResult();
+            changeResult.ChangeBreakdown = new Dictionary<int, int>();
+            
             return new()
             {
                 Success = true,
-                Message = $"Compra exitosa",
+                Message = $"Compra exitosa!! Su vuelto es de {changeToReturn} colones",
                 ChangeBreakdown = changeResult.ChangeBreakdown
             };
         }
-
-    
     
 }
