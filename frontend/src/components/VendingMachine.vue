@@ -55,7 +55,7 @@
         <input type="number" class="form-control" v-model.number="moneyQuantity" min="1" />
       </div>
       <div class="col-md-3">
-        <button class="btn btn-primary w-100">Agregar</button>
+        <button class="btn btn-primary w-100" @click="addMoney">Agregar</button>
       </div>
     </div>
 
@@ -95,7 +95,9 @@ export default {
     }
   },
   addToCart() {
-      if (!this.selectedDrink || this.selectedQuantity < 1) return;
+      if (!this.selectedDrink || this.selectedQuantity < 1) {
+        return;
+      }
       const drink = this.drinks.find(d => d.name === this.selectedDrink);
       if (!drink || drink.quantity < this.selectedQuantity) {
         alert('No hay suficientes latas');
@@ -110,6 +112,19 @@ export default {
       this.total += drink.price * this.selectedQuantity;
       this.selectedDrink = '';
       this.selectedQuantity = 1;
+    },
+    addMoney() {
+      if (!this.selectedMoney || this.moneyQuantity < 1) {
+        return;
+      }
+      const existingMoney = this.moneyInserted.find(money => money.MoneyType === this.selectedMoney);
+      if (existingMoney) {
+        existingMoney.Quantity += this.moneyQuantity;
+      } else {
+        this.moneyInserted.push({MoneyType: this.selectedMoney,Quantity: this.moneyQuantity});
+      }
+      this.selectedMoney = '';
+      this.moneyQuantity = 1;
     },
   }
 };
