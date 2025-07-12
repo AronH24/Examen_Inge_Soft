@@ -1,4 +1,8 @@
-public class VendingRepository
+using System.Collections.Generic;
+using System.Linq;
+
+
+public class VendingRepository : IVendingRepository
 {
     public List<Drink> Drinks { get; set; }
     public Dictionary<int, int> CoinStock { get; set; }
@@ -13,12 +17,15 @@ public class VendingRepository
             new Drink { Name = "Sprite", Price = 975, Quantity = 15 }
         };
 
-        // Aquí es donde se tienen las monedas para dar de vuelto
         CoinStock = new()
         {
             { 1000, 0 }, { 500, 20 }, { 100, 30 }, { 50, 50 }, { 25, 25 }
         };
+    }
 
+    public List<Drink> GetDrinks()
+    {
+        return Drinks;
     }
 
     public ChangeResult Purchase(PurchaseRequest request)
@@ -50,7 +57,6 @@ public class VendingRepository
 
         foreach (var money in request.MoneyInserted)
         {
-            // Las monedas que ingresa la persona se suman al inventario 
             CoinStock[money.MoneyType] += money.Quantity;
         }
 
@@ -60,14 +66,12 @@ public class VendingRepository
 
         if (!changeResult.Success)
         {
-            // Aquí se devuelve el dinero que la persona ingresó, si no se puede dar el vuelto
             foreach (var money in request.MoneyInserted)
                 CoinStock[money.MoneyType] -= money.Quantity;
 
             return changeResult;
         }
 
-        // Aquí se disminuye el inventario si todo sale bien
         foreach (var (drink, quantity) in drinkUpdates)
             drink.Quantity -= quantity;
 
@@ -78,7 +82,7 @@ public class VendingRepository
             ChangeBreakdown = changeResult.ChangeBreakdown
         };
     }
-        
+
     private ChangeResult CalculateChange(int amount)
     {
         var moneyTypes = CoinStock.Keys.OrderByDescending(k => k).ToList();
@@ -108,5 +112,4 @@ public class VendingRepository
 
         return new ChangeResult { Success = false, Message = "No hay cambio suficiente" };
     }
-    
 }
