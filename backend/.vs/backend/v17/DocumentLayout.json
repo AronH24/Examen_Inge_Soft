@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\controllers\\vendingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\controllers\\vendingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|c:\\users\\personal\\source\\repos\\examen_inge_soft\\backend\\backend\\models\\purchaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A24FDEE-BEB4-4BC0-8FE8-AAD1E746C209}|backend\\backend.csproj|solutionrelative:backend\\models\\purchaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,19 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VendingController.cs",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Controllers\\VendingController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\VendingController.cs",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Controllers\\VendingController.cs",
+              "RelativeToolTip": "backend\\Controllers\\VendingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T01:48:20.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PurchaseRequest.cs",
               "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\PurchaseRequest.cs",
               "RelativeDocumentMoniker": "backend\\Models\\PurchaseRequest.cs",
               "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\PurchaseRequest.cs",
               "RelativeToolTip": "backend\\Models\\PurchaseRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T00:49:41.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Money.cs",
               "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Money.cs",
               "RelativeDocumentMoniker": "backend\\Models\\Money.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Drink.cs",
               "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\Drink.cs",
               "RelativeDocumentMoniker": "backend\\Models\\Drink.cs",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ChangeResult.cs",
               "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\ChangeResult.cs",
               "RelativeDocumentMoniker": "backend\\Models\\ChangeResult.cs",

@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "backend\\Models\\PurchaseRequest.cs",
               "ToolTip": "C:\\Users\\Personal\\source\\repos\\Examen_Inge_Soft\\backend\\backend\\Models\\PurchaseRequest.cs",
               "RelativeToolTip": "backend\\Models\\PurchaseRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T00:49:41.22Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "backend\\Models\\Money.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T00:49:39.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T00:49:39.218Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "backend\\Models\\Drink.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T00:49:37.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T00:49:37.067Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "backend\\Models\\ChangeResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T00:49:34.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T00:49:34.317Z"
             }
           ]
         }
