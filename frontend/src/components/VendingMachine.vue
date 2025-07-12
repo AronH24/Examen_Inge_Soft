@@ -34,7 +34,7 @@
         <input type="number" class="form-control" v-model.number="selectedQuantity" min="1"/>
       </div>
       <div class="col-md-3">
-        <button class="btn btn-primary w-100">Agregar</button>
+        <button class="btn btn-primary w-100" @click="addToCart">Agregar</button>
       </div>
     </div>
 
@@ -94,6 +94,23 @@ export default {
       alert('Error al cargar los refrescos');
     }
   },
+  addToCart() {
+      if (!this.selectedDrink || this.selectedQuantity < 1) return;
+      const drink = this.drinks.find(d => d.name === this.selectedDrink);
+      if (!drink || drink.quantity < this.selectedQuantity) {
+        alert('No hay suficientes latas');
+        return;
+      }
+      const existing = this.cart.find(item => item.DrinkName === this.selectedDrink);
+      if (existing) {
+        existing.Quantity += this.selectedQuantity;
+      } else {
+        this.cart.push({ DrinkName: this.selectedDrink, Quantity: this.selectedQuantity });
+      }
+      this.total += drink.price * this.selectedQuantity;
+      this.selectedDrink = '';
+      this.selectedQuantity = 1;
+    },
   }
 };
 </script>
