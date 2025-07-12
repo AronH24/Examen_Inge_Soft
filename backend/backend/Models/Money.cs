@@ -1,5 +1,8 @@
-public class Money
+namespace backend.Models
 {
-    public int MoneyType { get; set; }
-    public int Quantity { get; set; }
+    public class Money
+    {
+        public int MoneyType { get; set; }
+        public int Quantity { get; set; }
+    }
 }
