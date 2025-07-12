@@ -66,15 +66,12 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      drinks: [
-        { name: 'Coca Cola', price: 800, quantity: 10 },
-        { name: 'Pepsi', price: 750, quantity: 8 },
-        { name: 'Fanta', price: 950, quantity: 10 },
-        { name: 'Sprite', price: 975, quantity: 15 },
-      ],
+      drinks: [],
       selectedDrink: '',
       selectedQuantity: 1,
       cart: [],
@@ -82,12 +79,21 @@ export default {
       moneyOptions: [1000, 500, 100, 50, 25],
       selectedMoney: '',
       moneyQuantity: 1,
-      moneyInserted: 0,
+      moneyInserted: [],
     };
   },
-  computed: {
+  mounted() {
+    this.getDrinks();
   },
   methods: {
+    async getDrinks() {
+    try {
+      const res = await axios.get('https://localhost:7037/api/Vending');
+      this.drinks = res.data;
+    } catch (e) {
+      alert('Error al cargar los refrescos');
+    }
+  },
   }
 };
 </script>

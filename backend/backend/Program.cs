@@ -8,8 +8,20 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVueApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:8080") 
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
+
 
 var app = builder.Build();
+app.UseCors("AllowVueApp");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
