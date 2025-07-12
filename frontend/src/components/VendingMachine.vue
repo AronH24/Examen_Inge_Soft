@@ -60,7 +60,7 @@
     </div>
 
     <div class="d-grid">
-      <button class="btn btn-warning">Pagar</button>
+      <button class="btn btn-warning" @click="pay">Pagar</button>
     </div>
   </div>
 </template>
@@ -126,6 +126,21 @@ export default {
       this.selectedMoney = '';
       this.moneyQuantity = 1;
     },
+    async pay() {
+      try {
+        const res = await axios.post('https://localhost:7037/api/Vending', {
+          Drinks: this.cart,
+          MoneyInserted: this.moneyInserted
+        });
+        alert(res.data.message || 'La compra ha sido exitosa!!');
+        this.cart = [];
+        this.moneyInserted = [];
+        this.total = 0;
+        this.fetchDrinks();
+      } catch (e) {
+        alert(e.response?.data?.message || 'Error en la compra!!');
+      }
+    }
   }
 };
 </script>
